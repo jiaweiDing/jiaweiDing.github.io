@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>OC与JS交互 | jiawei Ding的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#1.准备工作
+  <meta name="description" content="##1.准备工作
 
 准备好html文件
 
@@ -20,12 +20,12 @@
 
 
 
-[self.webView loadRequest:[NSURLRequest requestWithURL:[">
+[self.webView loadRequest:[NSURLRequest requestWithURL:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OC与JS交互">
 <meta property="og:url" content="http://yoursite.com/2016/01/14/OC与JS交互/index.html">
 <meta property="og:site_name" content="jiawei Ding的博客">
-<meta property="og:description" content="#1.准备工作
+<meta property="og:description" content="##1.准备工作
 
 准备好html文件
 
@@ -39,11 +39,11 @@
 
 
 
-[self.webView loadRequest:[NSURLRequest requestWithURL:[">
-<meta property="og:updated_time" content="2016-01-31T04:54:56.000Z">
+[self.webView loadRequest:[NSURLRequest requestWithURL:">
+<meta property="og:updated_time" content="2016-01-31T10:58:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OC与JS交互">
-<meta name="twitter:description" content="#1.准备工作
+<meta name="twitter:description" content="##1.准备工作
 
 准备好html文件
 
@@ -57,7 +57,7 @@
 
 
 
-[self.webView loadRequest:[NSURLRequest requestWithURL:[">
+[self.webView loadRequest:[NSURLRequest requestWithURL:">
   
     <link rel="alternative" href="/atom.xml" title="jiawei Ding的博客" type="application/atom+xml">
   
@@ -226,7 +226,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#1.准备工作</p>
+        <p>##1.准备工作</p>
 <ul>
 <li><p>准备好html文件</p>
 </li>
@@ -256,8 +256,8 @@
     &lt;script src=&quot;./zepto.min.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;./echarts-all.js&quot;&gt;&lt;/script&gt;</code>才能正常读取</p>
 </blockquote>
-<p>#2.交互</p>
-<p>##1.设值</p>
+<p>##2.交互</p>
+<p>###1.设值</p>
 <ul>
 <li><p>假如设值调用的方法是<code>setnum()</code>,传的参数是<code>{num:%ld,last:%ld,middle:%ld,hight:%ld}</code>,那么调用的方法是<code>setnum({num:%ld,last:%ld,middle:%ld,hight:%ld})</code></p>
 </li>
@@ -275,7 +275,7 @@
 <ul>
 <li><p>准确无误后就能看到效果</p>
 </li>
-<li><p><strong>注：一般html请求都是用JSON数据,可直接拼字符串</strong><br>##2.点击回调</p>
+<li><p><strong>注：一般html请求都是用JSON数据,可直接拼字符串</strong><br>###2.点击回调</p>
 </li>
 <li><p>需要用到系统JS框架,在<code>Link Binary With Libraries</code>中导入<code>JavaScriptCore.framework</code>库，并包含<code>&lt;JavaScriptCore/JavaScriptCore.h&gt;</code>头文件</p>
 </li>
