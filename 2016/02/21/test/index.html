@@ -4,60 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>OC与JS交互 | jiawei Ding的博客</title>
+  <title>test | jiawei Ding的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##1.准备工作
-
-准备好html文件
-
-里面可能含有各种css、js文件，但主要的是html文件
-
-先把整个文件夹导入到工程中
-
-创建webView(一定把用户交互打开[self.webView setUserInteractionEnabled:YES];)
-
-读取html文件
-
-
-
-[self.webView loadRequest:[NSURLRequest requestWithURL:">
+  <meta name="description" content="#测试
+##二级标题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OC与JS交互">
-<meta property="og:url" content="http://yoursite.com/2016/01/14/OC与JS交互/index.html">
+<meta property="og:title" content="test">
+<meta property="og:url" content="http://yoursite.com/2016/02/21/test/index.html">
 <meta property="og:site_name" content="jiawei Ding的博客">
-<meta property="og:description" content="##1.准备工作
-
-准备好html文件
-
-里面可能含有各种css、js文件，但主要的是html文件
-
-先把整个文件夹导入到工程中
-
-创建webView(一定把用户交互打开[self.webView setUserInteractionEnabled:YES];)
-
-读取html文件
-
-
-
-[self.webView loadRequest:[NSURLRequest requestWithURL:">
-<meta property="og:updated_time" content="2016-01-31T11:01:11.000Z">
+<meta property="og:description" content="#测试
+##二级标题">
+<meta property="og:updated_time" content="2016-02-21T06:57:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OC与JS交互">
-<meta name="twitter:description" content="##1.准备工作
-
-准备好html文件
-
-里面可能含有各种css、js文件，但主要的是html文件
-
-先把整个文件夹导入到工程中
-
-创建webView(一定把用户交互打开[self.webView setUserInteractionEnabled:YES];)
-
-读取html文件
-
-
-
-[self.webView loadRequest:[NSURLRequest requestWithURL:">
+<meta name="twitter:title" content="test">
+<meta name="twitter:description" content="#测试
+##二级标题">
   
     <link rel="alternative" href="/atom.xml" title="jiawei Ding的博客" type="application/atom+xml">
   
@@ -193,11 +154,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-OC与JS交互" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/14/OC与JS交互/" class="article-date">
-  	<time datetime="2016-01-14T02:40:18.000Z" itemprop="datePublished">2016-01-14</time>
+      <a href="/2016/02/21/test/" class="article-date">
+  	<time datetime="2016-02-21T06:57:05.000Z" itemprop="datePublished">2016-02-21</time>
 </a>
     </div>
   
@@ -210,7 +171,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      OC与JS交互
+      test
     </h1>
   
 
@@ -226,81 +187,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##1.准备工作</p>
-<ul>
-<li><p>准备好html文件</p>
-</li>
-<li><p>里面可能含有各种css、js文件，但主要的是html文件</p>
-</li>
-<li><p>先把整个文件夹导入到工程中</p>
-</li>
-<li><p>创建webView(一定把用户交互打开<code>[self.webView setUserInteractionEnabled:YES];</code>)</p>
-</li>
-<li><p>读取html文件</p>
-</li>
-</ul>
-<blockquote>
-<p>[self.webView loadRequest:[NSURLRequest requestWithURL:[[NSBundle mainBundle] URLForResource:@”test” withExtension:@”html”]]];</p>
-</blockquote>
-<ul>
-<li>这里有个需要注意的地方</li>
-</ul>
-<blockquote>
-<p>html源文件里面的路径需要更改成一级路径比如<code>./septo.min.js</code></p>
-<p>原本是按照本地路径<br><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/font/iconfont.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/app.css&quot;/&gt;
-    &lt;script src=&quot;../js/zepto.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;../js/echarts-all.js&quot;&gt;&lt;/script&gt;</code></p>
-<p>需要更改成<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./iconfont.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;./app.css&quot;/&gt;
-    &lt;script src=&quot;./zepto.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;./echarts-all.js&quot;&gt;&lt;/script&gt;</code>才能正常读取</p>
-</blockquote>
-<p>##2.交互</p>
-<p>###1.设值</p>
-<ul>
-<li><p>假如设值调用的方法是<code>setnum()</code>,传的参数是<code>{num:%ld,last:%ld,middle:%ld,hight:%ld}</code>,那么调用的方法是<code>setnum({num:%ld,last:%ld,middle:%ld,hight:%ld})</code></p>
-</li>
-<li><p>设值需要用到代理方法</p>
-</li>
-<li><p>遵循<code>UIWebViewDelegate</code>代理协议</p>
-</li>
-<li><p>在代理方法<code>webViewDidFinishLoad:</code>中调取系统的设值方法</p>
-</li>
-</ul>
-<blockquote>
-<p>NSString  *str = [NSString stringWithFormat:@”setnum({num:%ld,last:%ld,middle:%ld,hight:%ld},num,last,middle,hight)”];     #拼接调用JS的字符串</p>
-<p>[self.webView stringByEvaluatingJavaScriptFromString:str];    #对webview设值</p>
-</blockquote>
-<ul>
-<li><p>准确无误后就能看到效果</p>
-</li>
-<li><p><strong>注：一般html请求都是用JSON数据,可直接拼字符串</strong></p>
-</li>
-</ul>
-<p>###2.点击回调</p>
-<ul>
-<li><p>需要用到系统JS框架,在<code>Link Binary With Libraries</code>中导入<code>JavaScriptCore.framework</code>库，并包含<code>&lt;JavaScriptCore/JavaScriptCore.h&gt;</code>头文件</p>
-</li>
-<li><p>回调使用的是block</p>
-</li>
-<li><p>假设点击回调的方法名叫<code>request_data</code>,回调的参数有<code>year,month,dic</code></p>
-</li>
-<li><p>步骤：</p>
-</li>
-</ul>
-<blockquote>
-<p>JSContext *context=[webView valueForKeyPath:@”documentView.webView.mainFrame.javaScriptContext”];          #创建JSContext对象（此处通过当前 webView的键获取到jscontext）</p>
-<p>context[@”request_data”] = ^() { #请求回调的数据<br>NSArray <em>arr = [JSContext currentArguments];   #数组里就是回调的JSON数据<br>JSValue </em>jsv = arr[0];    #取到第一个参数year<br>year = jsv.toString;        #将JSON数据转成string<br>} </p>
-</blockquote>
-<ul>
-<li>如果需要点击回调后重新设置，可用上文提到的方法或者:</li>
-</ul>
-<blockquote>
-<p>NSString  *str = [NSString stringWithFormat:@”setnum({num:%ld,last:%ld,middle:%ld,hight:%ld},num,last,middle,hight)”];     #拼接调用JS的字符串</p>
-<p>[context evaluatrScript:str];            #给webView设值</p>
-</blockquote>
-<p>这样就OK了。</p>
+        <p>#测试</p>
+<p>##二级标题</p>
 
       
     </div>
@@ -310,18 +198,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/02/21/test/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          test
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/19/hexo-github/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo+Github搭建博客</div>
+    <a href="/2016/01/14/OC与JS交互/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OC与JS交互</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -356,7 +235,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="OC与JS交互" data-title="OC与JS交互" data-url="http://yoursite.com/2016/01/14/OC与JS交互/"></div>
+	<div class="ds-thread" data-thread-key="test" data-title="test" data-url="http://yoursite.com/2016/02/21/test/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
